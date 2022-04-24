@@ -1,3 +1,4 @@
+
 function onGeoOK(position){
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -6,10 +7,12 @@ function onGeoOK(position){
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const weather = document.querySelector("#weather span:last-child");
-            const city = document.querySelector("#weather span:first-child");
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
-            city.innerText = data.name;
+            const weather = document.querySelector("#weather");
+            const span = document.createElement("span");
+            weather.innerHTML = `<img src="../img/${data.weather[0].icon}.png">`;
+            span.innerHTML = `${data.name} <br><br> temp : ${data.main.temp}`;
+            weather.append(span);
+            // weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
         });
 }
 function onGeoError(){
@@ -17,3 +20,8 @@ function onGeoError(){
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
+
+if(isLogin){
+    const weatherDiv = document.querySelector(".weather");
+    weatherDiv.classList.remove("hidden");
+}

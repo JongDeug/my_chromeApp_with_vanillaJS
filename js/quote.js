@@ -17,6 +17,6 @@ const quotesContainer = document.querySelector("#quote");
 // paint quotes randomly
 function paintQuotes(){
     const index = Math.floor(Math.random()*quotes.length);
-    quotesContainer.innerText = `${quotes[index].quote}`;
+    quotesContainer.innerText = `Today Quote : ${quotes[index].quote}`;
 }
 paintQuotes();

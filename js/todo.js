@@ -11,7 +11,7 @@ function paintTodoList(todoObj){
     const span = document.createElement("span");
     const button = document.createElement("button");
     
-    button.innerText = "X";
+    button.innerText = "❌";
     li.append(span, button);
     ul.appendChild(li);
 
@@ -66,3 +66,7 @@ if(isEmptyLocalTodo !== null){
     setTodoList();
 } 
 
+if(isLogin){
+    const todoDiv = document.querySelector(".todo");
+    todoDiv.classList.remove("hidden");
+}

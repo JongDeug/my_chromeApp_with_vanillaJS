@@ -1,9 +1,9 @@
+const login = document.querySelector("#login");
 const loginForm = document.querySelector("#login-form");
-const inputName = document.querySelector("#login-form input:first-child");
+const inputName = document.querySelector("#login-form #inputName");
 const greetings = document.querySelector("#greetings");
 
 function idSubmitHandler(e){
-    e.preventDefault();
     const id = inputName.value;
     inputName.value = "";
     // console.log(id);
@@ -12,8 +12,8 @@ function idSubmitHandler(e){
 }
 
 function paintGreetings(id){
-    loginForm.classList.add("hidden");
-    greetings.innerText = `Hello! ${id}. Welcome to my homepage!`
+    login.classList.add("hidden");
+    greetings.innerText = `Hello! ${id}. Make It A Great Day!`
     greetings.classList.remove("hidden");
 }
 
@@ -21,9 +21,16 @@ const localId = localStorage.getItem("id");
 if(localId !== null){
     // if localId is not empty, show the greetings
     paintGreetings(localId);
+    isLogin = true;
 }else{
     // if localId is empty, show the loginForm
-    loginForm.classList.remove("hidden");
+    login.classList.remove("hidden");
     loginForm.addEventListener("submit", idSubmitHandler);
+    isLogin = false;
 }
 
+console.log("greet", isLogin);
+if(isLogin){
+    const infoDiv = document.querySelector(".info");
+    infoDiv.classList.remove("hidden");
+}
