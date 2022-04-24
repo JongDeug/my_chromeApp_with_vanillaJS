@@ -2,6 +2,11 @@
     display: none;
 }
 
+body{
+   background: url(../img/01.png) no-repeat;
+   background-size: cover;
+}
+
 
 /* login */
 #login {
