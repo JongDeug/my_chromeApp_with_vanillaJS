@@ -140,7 +140,7 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 .time h1{
-    font-size: 4em;
+    font-size: 3.8em;
     margin: 0; padding: 0;
     display: flex;
     justify-content: center;
@@ -205,6 +205,7 @@ body{
 
 @media (max-width: 1330px) {
     .container{width: 1200px;}
+    .contents{height: 800px;}
 }
 
 @media (max-width: 1024px) {
