@@ -6,7 +6,6 @@ const quotes = [
     { quote : "She can do, he can do, why not me?"},
     { quote : "Life is venture or nothing."},
     { quote : "No pain no gain."},
-    { quote : "Do not count the eggs before they hatch."},
     { quote : "Let bygones be bygones."},
     { quote : "No sweat, no sweet."},
     { quote : "You will never know until you try."},

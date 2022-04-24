@@ -106,11 +106,13 @@ body{
     font-size: 3em; 
     letter-spacing: 2px; 
     font-family: 'Anton', sans-serif;
+    color: #ffcdd2;
 }
 .info #quote{
     font-size: 3em;
     font-family: 'Ms Madi', cursive;
     margin-bottom: 0;
+    color: palegoldenrod; 
 }
 
 
@@ -122,9 +124,9 @@ body{
     position: relative;
 }
 .weather img{
-    display: block;
     float: left;
     width: 50%; 
+    height: 250px;
     background: rgb(0, 0, 0, 0.5);
 }
 .weather span{
@@ -133,6 +135,7 @@ body{
     top: 50%; left: 75%;
     transform: translate(-50%, -50%);
     font-size: 1.5em;
+    color: palegoldenrod; 
 }
 
 /* time */
@@ -140,12 +143,13 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 .time h1{
-    font-size: 3.8em;
+    font-size: 3.6em;
     margin: 0; padding: 0;
     display: flex;
     justify-content: center;
     height: 100%;
     align-items: center;
+    color: palegoldenrod; 
 }
 
 
@@ -155,6 +159,7 @@ body{
     font-family: 'Nanum Pen Script', cursive;
     text-align: center;
     display: inline-block;
+    color: palegoldenrod; 
     font-size: 2.5em;
 }
 .todo form{
@@ -174,6 +179,7 @@ body{
     list-style: inside lower-roman;
     margin: 0; padding: 0;
     height: 450px;
+    color: palegoldenrod; 
     float: left;
     font-size: 2.3em;
     overflow: hidden;
@@ -207,8 +213,3 @@ body{
     .container{width: 1200px;}
     .contents{height: 800px;}
 }
-
-@media (max-width: 1024px) {
-    
-}
-
