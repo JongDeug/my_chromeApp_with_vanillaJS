@@ -29,7 +29,6 @@ if(localId !== null){
     isLogin = false;
 }
 
-console.log("greet", isLogin);
 if(isLogin){
     const infoDiv = document.querySelector(".info");
     infoDiv.classList.remove("hidden");
